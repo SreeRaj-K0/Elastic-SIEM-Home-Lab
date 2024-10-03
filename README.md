@@ -5,4 +5,6 @@
 
 ![network](images/dark.png)
 
+![network](images/diagram-updated.png)
+
 
