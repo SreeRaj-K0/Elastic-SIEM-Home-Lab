@@ -1,2 +1,4 @@
-# SIEM-Home-Lab
-Documentation of my home lab setup using Elastic Stack and Kibana for security monitoring
+# SIEM-Home-Lab 
+
+![network-diagram](images/diagram.png)
+
