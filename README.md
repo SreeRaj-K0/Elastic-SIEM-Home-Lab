@@ -2,3 +2,7 @@
 
 ![network-diagram](images/diagram.png)
 
+
+![network](images/dark.png)
+
+
