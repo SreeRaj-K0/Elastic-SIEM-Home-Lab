@@ -54,3 +54,11 @@ Using Kali Lets's attack rdp with Hydra
 ![rdp](images/rdp-failed.png)
 
 
+![dashboard](images/dbcreat.png)
+
+![db](images/dashbrd-rdp.png)
+
+![dashbrd](images/dashb.png)
+
+
+
