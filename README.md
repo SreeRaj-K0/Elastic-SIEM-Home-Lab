@@ -36,6 +36,21 @@ This setup allows for real-time monitoring and testing of security events using 
 ![fleet](images/fleet-setup.png)
 
 
+## Simulating RDP Brute Force and Detecting It: Creating an RDP Failed Attempt Dashboard and Alert
 
+
+Using Kali Lets's attack rdp with Hydra
+
+![hydra](images/hydra.png)
+
+
+
+
+![agent](images/agent.png)
+
+
+
+
+![rdp](images/rdp-failed.png)
 
 
