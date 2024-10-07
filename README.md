@@ -45,9 +45,9 @@ Using Kali Lets's attack rdp with Hydra
 
 
 
+## Create RDP failed Login Dashboard
 
 ![agent](images/agent.png)
-
 
 
 
@@ -59,6 +59,38 @@ Using Kali Lets's attack rdp with Hydra
 ![db](images/dashbrd-rdp.png)
 
 ![dashbrd](images/dashb.png)
+
+
+## Creating SSH Failed Login Dashbord 
+
+
+Using Hydra Let's brute-force SSH on our Ubuntu-server
+
+![hydra](images/hydra-ssh.png)
+
+![hydra](images/ssh-ubuntu.png)
+
+![dashb](images/ssh-dashb.png)
+
+![dashb](images/dash-ssh.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
