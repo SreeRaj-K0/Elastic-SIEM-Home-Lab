@@ -78,19 +78,101 @@ Using Hydra Let's brute-force SSH on our Ubuntu-server
 
 
 
+## Attack Simulation Using Mythic C2 Agent: Detecting and Containing the Host with Elastic Defend EDR
+
+
+### Set up the Mythic C2 framework on an Ubuntu server using Docker  
+
+
+![mythic](images/mythic1.png)
 
 
 
+![mythic](images/mythic2.png)
 
 
 
+### Creating Payload
+
+![mythic](images/payload1.png)
+
+![mythic](images/payload2.png)
+
+
+![mythic](images/payload3.png)
 
 
 
+![mythic](images/payload4.png)
 
 
 
+![mythic](images/payload5.png) 
 
 
+
+### Dropping Payload On Windows host
+
+ ![mythic](images/droping.png)
+
+![mythic](images/paylod1.png)  
+
+![mythic](images/run.png)
+
+### Mythic C2 Process
+
+![mythic](images/process2.png)
+
+### Mythic C2 TCP Connection 
+
+
+![mythic](images/tcp.png)
+###  Got callback C2 on Mythic server
+
+![mythic](images/callback.png)
+
+## Creating a Custom Rule to Detect Mythic C2 in Elastic Defend
+
+![mythic](images/kibana.png)
+
+![mythic](images/query.png)
+
+![mythic](images/hash.png) 
+
+
+![mythic](images/rule.png) 
+
+
+
+![mythic](images/rule2.png) 
+
+![mythic](images/rule3.png)  
+
+
+![mythic](images/rule-title.png)  
+
+
+![mythic](images/action.png)  
+
+![mythic](images/contain.png)     
+
+
+
+![mythic](images/rule5.png)     
+
+
+
+## Simulating Mythic C2 attack again to test the rule
+
+![mythic](images/rrr.png)     
+
+![mythic](images/r2.png)     
+![mythic](images/r3.png)     
+
+
+## Elastic EDR effectively contained the host based on rule detection
+
+
+![mythic](images/host-cont.png)     
 
 
