@@ -1,4 +1,4 @@
-# SIEM-Home-Lab 
+# Elastic SIEM-Home-Lab  
 
 ![network-diagram](images/diag.png)
 
@@ -14,8 +14,9 @@ This lab simulates a network environment designed for monitoring and detection u
 - **Windows Enterprise (10.10.10.155)**: Running Elastic-Agent and Sysmon to track events.
 - **Kali Linux (10.10.10.140)**: Used for attack simulations to test the detection capabilities of the SIEM.
 - **Elastic Stack Server (10.10.10.100)**: Hosted on Ubuntu, running Elasticsearch, Kibana, and Fleet Server for log aggregation, visualization, and alerting.
-- **PfSense Firewall**: Secures the network and connects to the internal LAN (10.10.10.1/24) under VMware virtualization.
-- Created and deployed a Mythic C2 payload, developed detection rules, and used Elastic  EDR to effectively detect and contain the compromised host
+- **Created and deployed a Mythic C2 payload, developed detection rules, and used Elastic  EDR to effectively detect and contain the compromised host
+
+
 
 This setup allows for real-time monitoring and testing of security events using Sysmon data from all connected systems, with the goal of improving detection and response capabilities.
 
@@ -167,7 +168,7 @@ Using Hydra Let's brute-force SSH on our Ubuntu-server
 ![mythic](images/hash.png) 
 
 
-### Detection Rule
+### Query
 
 
 ```d
@@ -213,4 +214,10 @@ event.dataset: "winlog.winlog" and winlog.event_id : "1"  and winlog.event_data.
 
 
 ![mythic](images/host-cont.png)     
+
+## Conclusion
+
+*This project successfully demonstrates a comprehensive network monitoring and detection setup using the Elastic Stack. By integrating Elastic-Agent and Sysmon across a Windows Server, Ubuntu Server, and Windows Enterprise machine, real-time log collection and event tracking were achieved. Simulated attack scenarios using Kali Linux, along with the deployment of a Mythic C2 payload, enabled robust testing of the SIEM’s detection capabilities. Custom detection rules and Elastic EDR further enhanced the ability to identify and contain threats effectively.*
+
+
 
