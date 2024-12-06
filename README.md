@@ -16,8 +16,8 @@ This lab simulates a network environment designed for monitoring and detection u
 - **Elastic Stack Server (10.10.10.100)**: Hosted on Ubuntu, running Elasticsearch, Kibana, and Fleet Server for log aggregation, visualization, and alerting.
 
  
- **Created and deployed a Mythic C2 payload, developed detection rules, and used Elastic  EDR to effectively detect and contain the compromised host 
  
+**Created and deployed a Mythic C2 payload, developed detection rules, and used Elastic EDR to effectively detect and contain the compromised host.**
 
 
 
