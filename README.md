@@ -15,6 +15,7 @@ This lab simulates a network environment designed for monitoring and detection u
 - **Kali Linux (10.10.10.140)**: Used for attack simulations to test the detection capabilities of the SIEM.
 - **Elastic Stack Server (10.10.10.100)**: Hosted on Ubuntu, running Elasticsearch, Kibana, and Fleet Server for log aggregation, visualization, and alerting.
 - **PfSense Firewall**: Secures the network and connects to the internal LAN (10.10.10.1/24) under VMware virtualization.
+- Created and deployed a Mythic C2 payload, developed detection rules, and used Elastic  EDR to effectively detect and contain the compromised host
 
 This setup allows for real-time monitoring and testing of security events using Sysmon data from all connected systems, with the goal of improving detection and response capabilities.
 
@@ -70,7 +71,11 @@ Using Hydra Let's brute-force SSH on our Ubuntu-server
 
 ![hydra](images/ssh-ubuntu.png)
 
+
+
 ![dashb](images/ssh-dashb.png)
+
+
 
 ![dashb](images/dash-ssh.png)
 
@@ -94,6 +99,8 @@ Using Hydra Let's brute-force SSH on our Ubuntu-server
 
 ### Creating Payload
 
+
+
 ![mythic](images/payload1.png)
 
 ![mythic](images/payload2.png)
@@ -113,13 +120,23 @@ Using Hydra Let's brute-force SSH on our Ubuntu-server
 
 ### Dropping Payload On Windows host
 
+
+
  ![mythic](images/droping.png)
+
+
 
 ![mythic](images/paylod1.png)  
 
+
+
+
 ![mythic](images/run.png)
 
+
+
 ### Mythic C2 Process
+
 
 ![mythic](images/process2.png)
 
@@ -127,17 +144,39 @@ Using Hydra Let's brute-force SSH on our Ubuntu-server
 
 
 ![mythic](images/tcp.png)
-###  Got callback C2 on Mythic server
+
+###  Got callback on Mythic server
+
 
 ![mythic](images/callback.png)
 
 ## Creating a Custom Rule to Detect Mythic C2 in Elastic Defend
 
+
+
+
 ![mythic](images/kibana.png)
+
+
 
 ![mythic](images/query.png)
 
+
+
+
 ![mythic](images/hash.png) 
+
+
+### Detection Rule
+
+
+```d
+
+event.dataset: "winlog.winlog" and winlog.event_id : "1"  and winlog.event_data.Hashes:SHA1=AF10FDECE17ADAA3A134913D6F3842B11CCBFEC6,MD5=0BAD5235BD4DAB08116FA19791713D4E,SHA256=CF8BE2F0E72B05FA3A8D91811AC8982600C0DE9CA81BFE974FFA3DD0C4E8EF60,IMPHASH=F34D5F2D4577ED6D9CEEC516C1F5A744
+
+```
+
+
 
 
 ![mythic](images/rule.png) 
@@ -174,5 +213,4 @@ Using Hydra Let's brute-force SSH on our Ubuntu-server
 
 
 ![mythic](images/host-cont.png)     
-
 
